@@ -1,127 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>monoraytech</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .header{
-            background-color: #C7F1FD;
-            color: #6d432f;
-            text-align: center;
-            padding: 20px;
-        }
-        nav{
-            background-color: #C7F1FD;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a{
-            color: #6d432f;
-            text-decoration: none;
-            font-weight: bold;
-            /*
-            margin-right: 15px;
-            margin-left: 15px;
-            */
-            margin: 0 15px;
-            
-        }
-        .content{
-            width: 1000px;
-            margin: 40px auto;
-            
-        }
-        .card{
-            display: inline-block;
-            width: 30%;
-            height: 320px;
-            margin: 1.5%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .card img{
-            width: 100%;
-            height: 160px;
-        }
-        .card-content{
-            padding: 15px;
-            font-size: 16px;
-        }
-        .card-content h3{
-            margin-bottom: 10px;
-        }
-        .btn{
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #fde089;
-            color: #6b4e2f;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .footer{
-            background-color: #C7F1FD;
-            color: #6b4e2f;
-            padding: 15px;
-            margin-top: 50px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모노래이테크</title>
+<style>
+  :root {
+    --color-bg:   #FFFFFF;
+    --color-ink:  #1B1B1B;
+    --color-sub:  #6B6B6B;
+    --color-line: #E3E3E3;
+    --color-accent: #2C5F8A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    color: var(--color-ink);
+    background: var(--color-bg);
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== 헤더 / 메뉴 ===== */
+  header {
+    border-bottom: 1px solid var(--color-line);
+    position: sticky;
+    top: 0;
+    background: var(--color-bg);
+    z-index: 10;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  nav {
+    display: flex;
+    gap: 28px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    color: var(--color-sub);
+  }
+
+  nav a:hover { color: var(--color-accent); }
+
+  /* ===== 섹션 공통 (지금은 틀만) ===== */
+  section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  section:last-of-type { border-bottom: none; }
+
+  section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 8px;
+  }
+
+  .section-note {
+    font-size: 0.9rem;
+    color: var(--color-sub);
+  }
+
+  /* ===== 히어로 (최소한만) ===== */
+  .hero {
+    padding: 88px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin: 0 0 12px;
+  }
+
+  .hero p {
+    color: var(--color-sub);
+    margin: 0;
+  }
+
+  /* ===== 푸터 ===== */
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.85rem;
+    color: var(--color-sub);
+  }
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>모노레이태크</h1>
-    </div>
 
+<header>
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">모노래이테크</a>
     <nav>
-        <a href="#">홈</a>
-        <a href="#">회사소개</a>
-        <a href="#">주력기술안내</a>
-        <a href="#">문의하기</a>
+      <a href="about.html">회사소개</a>
+      <a href="#business">사업분야</a>
+      <a href="#solution">솔루션</a>
+      <a href="#projects">실적</a>
+      <a href="#contact">문의</a>
     </nav>
+  </div>
+</header>
 
-    <div class="content">
-        <h2>주요 서비스</h2>
-        <div class="content-card">
-            <div class="card">
-                <img src="../img/6_qc_thum.png">
-                <div class="card-content">
-                    <h3>제목</h3>
-                    <p>내용물</p>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="../img/6_qc_thum.png">
-                <div class="card-content">
-                    <h3>제목</h3>
-                    <p>내용물</p>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="../img/6_qc_thum.png">
-                <div class="card-content">
-                    <h3>제목</h3>
-                    <p>내용물</p>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center;">
-            <a href="#" class="btn">더보기</a>
-        </div>
-    </div>
-
-    <div class="footer">
-		상호 : 주식회사 모노래이테크&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;대표이사 : 백민하<br>
-		사업장소재지 : 서울특별시 구로구 디지털로27길 24, 7층 701-2호(구로동, 벽산디지털밸리1차)<br>
-		사업자등록번호 : 113 - 86 - 90156	&nbsp;&nbsp;&nbsp;&nbsp;Tel : 02 - 857 - 3332<br>
-        Copyright &copy; monoraytech Corp. All right reserved
-    </div>
+<footer>
+  <div class="wrap">
+	상호 : 주식회사 모노래이테크&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;대표이사 : 백민하&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;본사 : 서울특별시 구로구 디지털로27길 24, 7층 701-2호(구로동, 벽산디지털밸리1차)<br>
+    사업자등록번호 : 113 -86 - 90156&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel : 02 - 857 - 3332<br>
+	Copyright&nbsp;&copy; monoraytech. Corp. All rights reserved
+  </div>
+</footer>
 
 </body>
 </html>
