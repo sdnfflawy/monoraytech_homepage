@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>오시는길 | About Us | 모노래이테크</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<script src="/layout.js"></script>
+<main>
+<section class="page-head">
+    <div class="wrap">
+        <p class="eyebrow">ABOUT US</p>
+        <h1>오시는길</h1>
+        <p>프로젝트 및 제품 관련 문의를 기다립니다</p>
+    </div>
+</section>
+
+<section>
+    <div class="wrap grid two">
+        <div>
+            <h2 class="eyebrow-title">연락처</h2>
+            <table class="info">
+                <tr><th>전화</th><td>02-857-3332</td></tr>
+                <tr><th>주소</th><td>서울특별시 구로구 디지털로27길 24, 7층 701-2호<br>(구로동, 벽산디지털밸리1차)</td></tr>
+            </table>
+        </div>
+        <div>
+            <h2 class="eyebrow-title">오시는 길</h2>
+            <img class="map" id="mapImg" src="/image/map.png" alt="모노래이테크 위치 지도" title="클릭하면 크게 볼 수 있습니다">
+            <p class="map-actions">
+                <a class="btn btn-line" href="https://naver.me/FJOVStIU" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox"><img src="/image/map.png" alt="모노래이테크 위치 지도 확대"></div>
+<script>
+    const lb = document.getElementById('lightbox');
+    document.getElementById('mapImg').addEventListener('click', () => lb.classList.add('open'));
+    lb.addEventListener('click', () => lb.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+</script>
+</main>
+</body>
+</html>
